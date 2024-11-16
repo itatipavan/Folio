@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import { Menu, X, Code2 } from 'lucide-react';
+import React, { useState } from "react";
+import { Menu, X, Code2 } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const navItems = ['About', 'Projects', 'Skills', 'Contact'];
+  const navItems = ["About", "Projects", "Skills", "Contact"];
 
   return (
     <nav className="fixed w-full bg-white/80 backdrop-blur-sm z-50 shadow-sm">
@@ -12,9 +12,11 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Code2 className="h-8 w-8 text-indigo-600" />
-            <span className="ml-2 text-xl font-bold text-gray-800">DevPortfolio</span>
+            <span className="ml-2 text-xl font-bold text-gray-800">
+              DevPortfolio
+            </span>
           </div>
-          
+
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {navItems.map((item) => (
@@ -28,13 +30,17 @@ const Navbar = () => {
               ))}
             </div>
           </div>
-          
+
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-indigo-600"
             >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isOpen ? (
+                <X className="h-6 w-6" />
+              ) : (
+                <Menu className="h-6 w-6" />
+              )}
             </button>
           </div>
         </div>
