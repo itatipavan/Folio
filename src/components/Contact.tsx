@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
+import emailjs from "@emailjs/browser";
+import { message } from "antd";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -12,6 +14,39 @@ const Contact = () => {
     e.preventDefault();
     // Handle form submission here
     console.log(formData);
+    // emailjs
+    //   .send(
+    //     process.env.REACT_APP_EMAILJS_SERVICE_ID!,
+    //     process.env.REACT_APP_EMAILJS_TEMPLATE_ID!,
+    //     {
+    //       from_name: formData.name,
+    //       from_email: formData.email,
+    //       message: formData.message,
+    //     },
+    //     process.env.REACT_APP_EMAILJS_PUBLIC_KEY!
+    //   )
+    emailjs
+      .send(
+        "service_5rl530t", // Replace with your EmailJS service ID
+        "template_ix0u2ot", // Replace with your EmailJS template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        "sQDmlVlBG6AsbKQOD" // Replace with your EmailJS public key
+      )
+      .then((response) => {
+        console.log("Email sent successfully:", response);
+        setFormData({ name: "", email: "", message: "" });
+        // alert("Message sent successfully!");
+        message.success("Message sent successfully!");
+      })
+      .catch((error) => {
+        console.error("Email sending failed:", error);
+        // alert("Failed to send message. Please try again.");
+        message.error("Failed to send message. Please try again.");
+      });
   };
 
   const handleChange = (
