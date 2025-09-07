@@ -10,21 +10,9 @@ const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log(formData);
-    // emailjs
-    //   .send(
-    //     process.env.REACT_APP_EMAILJS_SERVICE_ID!,
-    //     process.env.REACT_APP_EMAILJS_TEMPLATE_ID!,
-    //     {
-    //       from_name: formData.name,
-    //       from_email: formData.email,
-    //       message: formData.message,
-    //     },
-    //     process.env.REACT_APP_EMAILJS_PUBLIC_KEY!
-    //   )
+
     emailjs
       .send(
         "service_5rl530t", // Replace with your EmailJS service ID
@@ -39,19 +27,15 @@ const Contact = () => {
       .then((response) => {
         console.log("Email sent successfully:", response);
         setFormData({ name: "", email: "", message: "" });
-        // alert("Message sent successfully!");
         message.success("Message sent successfully!");
       })
       .catch((error) => {
         console.error("Email sending failed:", error);
-        // alert("Failed to send message. Please try again.");
         message.error("Failed to send message. Please try again.");
       });
   };
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+  const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -138,7 +122,7 @@ const Contact = () => {
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
-                rows={4}
+                rows="4"
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-indigo-500 focus:border-indigo-500"
                 required
               />
