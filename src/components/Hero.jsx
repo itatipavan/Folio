@@ -1,6 +1,7 @@
 import React from "react";
 import { Github, Linkedin, Mail, ArrowDown, Sparkles } from "lucide-react";
-import Pavan from "../assets/Pavan.JPG";
+import Pavan from "../assets/Pavan.jpg";
+import { calculateExperience } from "../utils/common";
 
 const Hero = () => {
   return (
@@ -148,7 +149,8 @@ const Hero = () => {
                 <p className="flex items-center justify-center lg:justify-start gap-2">
                   <span className="text-2xl">💼</span>
                   <span>
-                    2 Years Experience in Industrial B2B SaaS Platforms
+                    {calculateExperience()} Years Experience in Industrial B2B
+                    SaaS Platforms
                   </span>
                 </p>
                 <p className="flex items-center justify-center lg:justify-start gap-2">

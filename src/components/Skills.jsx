@@ -1,5 +1,6 @@
 import React from "react";
 import { Code, Database, Wrench, Briefcase, Sparkles } from "lucide-react";
+import { calculateExperience } from "../utils/common";
 
 const Skills = () => {
   const skillCategories = [
@@ -196,8 +197,8 @@ const Skills = () => {
               💼 Specialized in Industrial B2B SaaS Development
             </p>
             <p className="text-base" style={{ color: "var(--color-ivory)" }}>
-              Over 2 years of hands-on experience building complex ERP, CRM,
-              HRM, and Billing Systems
+              Over {calculateExperience()} years of hands-on experience building
+              complex ERP, CRM, HRM, and Billing Systems
             </p>
           </div>
         </div>

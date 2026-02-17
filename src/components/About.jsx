@@ -1,5 +1,6 @@
 import React from "react";
 import { Code, Globe, Server, Zap, Layers, Rocket } from "lucide-react";
+import { calculateExperience } from "../utils/common";
 
 const About = () => {
   const features = [
@@ -93,7 +94,7 @@ const About = () => {
         {/* Stats Section */}
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
-            { number: "2+", label: "Years Experience" },
+            { number: calculateExperience(), label: "Years Experience" },
             { number: "10+", label: "Projects Completed" },
             { number: "5+", label: "Technologies" },
             { number: "100%", label: "Client Satisfaction" },
