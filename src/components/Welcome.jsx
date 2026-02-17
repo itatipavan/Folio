@@ -30,10 +30,22 @@ const Welcome = () => {
     <div className="h-screen flex items-center justify-center animated-gradient overflow-hidden relative">
       {/* Floating Particles */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="particle w-32 h-32 bg-white/20 top-20 left-20" style={{ animationDelay: '0s' }}></div>
-        <div className="particle w-24 h-24 bg-white/10 top-40 right-32" style={{ animationDelay: '2s' }}></div>
-        <div className="particle w-40 h-40 bg-white/10 bottom-32 left-40" style={{ animationDelay: '4s' }}></div>
-        <div className="particle w-28 h-28 bg-white/20 bottom-20 right-20" style={{ animationDelay: '1s' }}></div>
+        <div
+          className="particle w-32 h-32 bg-white/20 top-20 left-20"
+          style={{ animationDelay: "0s" }}
+        ></div>
+        <div
+          className="particle w-24 h-24 bg-white/10 top-40 right-32"
+          style={{ animationDelay: "2s" }}
+        ></div>
+        <div
+          className="particle w-40 h-40 bg-white/10 bottom-32 left-40"
+          style={{ animationDelay: "4s" }}
+        ></div>
+        <div
+          className="particle w-28 h-28 bg-white/20 bottom-20 right-20"
+          style={{ animationDelay: "1s" }}
+        ></div>
       </div>
 
       <div className="relative text-center flex items-center justify-center">
@@ -46,7 +58,8 @@ const Welcome = () => {
                 : getLetterAnimation(index)
             }`}
             style={{
-              textShadow: '0 0 40px rgba(255, 255, 255, 0.5), 0 0 80px rgba(255, 255, 255, 0.3)'
+              textShadow:
+                "0 0 40px rgba(255, 255, 255, 0.5), 0 0 80px rgba(255, 255, 255, 0.3)",
             }}
           >
             {letter}

@@ -7,7 +7,10 @@ const Footer = () => {
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-600 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div
+          className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse"
+          style={{ animationDelay: "2s" }}
+        ></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -21,7 +24,8 @@ const Footer = () => {
               <span className="text-2xl font-bold">Portfolio</span>
             </div>
             <p className="text-gray-400 leading-relaxed">
-              Crafting beautiful and functional web experiences with modern technologies.
+              Crafting beautiful and functional web experiences with modern
+              technologies.
             </p>
           </div>
 
@@ -29,7 +33,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
             <div className="space-y-2">
-              {['About', 'Projects', 'Skills', 'Contact'].map((item) => (
+              {["About", "Projects", "Skills", "Contact"].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
@@ -46,9 +50,21 @@ const Footer = () => {
             <h3 className="text-xl font-bold mb-4">Connect With Me</h3>
             <div className="flex gap-4">
               {[
-                { icon: Github, href: "https://github.com/itatipavan", label: "GitHub" },
-                { icon: Linkedin, href: "https://www.linkedin.com/in/pavantati/", label: "LinkedIn" },
-                { icon: Mail, href: "mailto:itatipavan@gmail.com", label: "Email" }
+                {
+                  icon: Github,
+                  href: "https://github.com/itatipavan",
+                  label: "GitHub",
+                },
+                {
+                  icon: Linkedin,
+                  href: "https://www.linkedin.com/in/pavantati/",
+                  label: "LinkedIn",
+                },
+                {
+                  icon: Mail,
+                  href: "mailto:itatipavan@gmail.com",
+                  label: "Email",
+                },
               ].map((social, index) => {
                 const Icon = social.icon;
                 return (

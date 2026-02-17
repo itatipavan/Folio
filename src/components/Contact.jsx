@@ -23,7 +23,7 @@ const Contact = () => {
           from_email: formData.email,
           message: formData.message,
         },
-        "sQDmlVlBG6AsbKQOD"
+        "sQDmlVlBG6AsbKQOD",
       )
       .then((response) => {
         console.log("Email sent successfully:", response);
@@ -44,11 +44,17 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-24 bg-gradient-to-br from-gray-50 via-purple-50 to-gray-50 relative overflow-hidden">
+    <section
+      id="contact"
+      className="py-24 bg-gradient-to-br from-gray-50 via-purple-50 to-gray-50 relative overflow-hidden"
+    >
       {/* Background Effects */}
       <div className="absolute top-20 left-10 w-96 h-96 bg-purple-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-      <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: '2s' }}></div>
-      
+      <div
+        className="absolute bottom-20 right-10 w-96 h-96 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"
+        style={{ animationDelay: "2s" }}
+      ></div>
+
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20 slide-in-up">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-500 text-white text-sm font-bold rounded-full shadow-lg mb-6">
@@ -59,7 +65,8 @@ const Contact = () => {
             Let's <span className="gradient-text">Connect</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Have a project in mind? Let's discuss how I can help bring your ideas to life
+            Have a project in mind? Let's discuss how I can help bring your
+            ideas to life
           </p>
         </div>
 
@@ -70,31 +77,55 @@ const Contact = () => {
               <h3 className="text-3xl font-bold mb-8 text-gray-900">
                 Contact Information
               </h3>
-              
+
               <div className="space-y-6">
                 {[
-                  { icon: Mail, text: "itatipavan@gmail.com", href: "mailto:itatipavan@gmail.com", gradient: "from-purple-600 to-pink-600", testId: "mail" },
-                  { icon: Phone, text: "+91 7013316511", href: "tel:+917013316511", gradient: "from-blue-600 to-cyan-600", testId: "phone" },
-                  { icon: MapPin, text: "Hyderabad, India", href: null, gradient: "from-green-600 to-teal-600", testId: "location" }
+                  {
+                    icon: Mail,
+                    text: "itatipavan@gmail.com",
+                    href: "mailto:itatipavan@gmail.com",
+                    gradient: "from-purple-600 to-pink-600",
+                    testId: "mail",
+                  },
+                  {
+                    icon: Phone,
+                    text: "+91 7013316511",
+                    href: "tel:+917013316511",
+                    gradient: "from-blue-600 to-cyan-600",
+                    testId: "phone",
+                  },
+                  {
+                    icon: MapPin,
+                    text: "Hyderabad, India",
+                    href: null,
+                    gradient: "from-green-600 to-teal-600",
+                    testId: "location",
+                  },
                 ].map((item, index) => {
                   const Icon = item.icon;
                   const content = (
                     <>
                       {/* Glow Effect */}
-                      <div className={`absolute -inset-0.5 bg-gradient-to-r ${item.gradient} rounded-2xl blur opacity-30 group-hover:opacity-75 transition duration-1000`}></div>
-                      
+                      <div
+                        className={`absolute -inset-0.5 bg-gradient-to-r ${item.gradient} rounded-2xl blur opacity-30 group-hover:opacity-75 transition duration-1000`}
+                      ></div>
+
                       {/* Card Content */}
                       <div className="relative flex items-center p-6 bg-white rounded-2xl shadow-lg">
-                        <div className={`p-4 bg-gradient-to-br ${item.gradient} rounded-xl mr-4`}>
+                        <div
+                          className={`p-4 bg-gradient-to-br ${item.gradient} rounded-xl mr-4`}
+                        >
                           <Icon className="h-6 w-6 text-white" />
                         </div>
-                        <span className="text-gray-700 font-semibold text-lg">{item.text}</span>
+                        <span className="text-gray-700 font-semibold text-lg">
+                          {item.text}
+                        </span>
                       </div>
                     </>
                   );
 
                   return item.href ? (
-                    <a 
+                    <a
                       key={index}
                       href={item.href}
                       className="group relative block hover-scale"
@@ -117,9 +148,12 @@ const Contact = () => {
             <div className="relative group">
               {/* Glow Effect */}
               <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-600 to-blue-500 rounded-2xl blur opacity-30 group-hover:opacity-75 transition duration-1000"></div>
-              
+
               {/* Form Container */}
-              <form onSubmit={handleSubmit} className="relative p-8 bg-white rounded-2xl shadow-2xl space-y-6">
+              <form
+                onSubmit={handleSubmit}
+                className="relative p-8 bg-white rounded-2xl shadow-2xl space-y-6"
+              >
                 {/* Name Input */}
                 <div className="relative">
                   <input
