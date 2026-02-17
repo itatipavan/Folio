@@ -1,6 +1,6 @@
 import React from "react";
 import { Github, Linkedin, Mail, ArrowDown, Sparkles } from "lucide-react";
-import Pavan from "../assets/Pavan.jpg";
+import Pavan from "../assets/Pavan.JPG";
 import { calculateExperience } from "../utils/common";
 
 const Hero = () => {
